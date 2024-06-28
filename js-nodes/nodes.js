@@ -14,5 +14,7 @@ function myLoadFunction() {
     firstSection.appendChild(anotherPara);
     anotherPara.textContent = anotherText;
 
+    firstSection.setAttribute('class', 'highlight');
+
     secondSection.remove();
 }
