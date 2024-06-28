@@ -1,8 +1,8 @@
 const itemList = document.querySelector('ul');
 const input = document.getElementById('item');
-const addButton = document.querySelector('button');
+const button = document.querySelector('button');
 
-addButton.addEventListener('click', () => {
+button.addEventListener('click', () => {
   const newItem = input.value;
   input.value = '';
 
@@ -17,6 +17,10 @@ addButton.addEventListener('click', () => {
   deleteButton.textContent = "Delete";
 
   itemList.appendChild(newListItem);
+
+  deleteButton.addEventListener('click', () => {
+    itemList.removeChild(newListItem);
+  });
 
   input.focus();
 });
