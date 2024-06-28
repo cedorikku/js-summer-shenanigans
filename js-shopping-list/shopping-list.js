@@ -6,20 +6,20 @@ button.addEventListener('click', () => {
   const newItem = input.value;
   input.value = '';
 
-  const newListItem = document.createElement('li');
-  const listItemValue = document.createElement('span');
-  const deleteButton = document.createElement('button');
+  const listItem = document.createElement('li');
+  const listText = document.createElement('span');
+  const listButton = document.createElement('button');
 
-  newListItem.appendChild(listItemValue);
-  newListItem.appendChild(deleteButton);
+  listItem.appendChild(listText);
+  listItem.appendChild(listButton);
 
-  listItemValue.textContent = newItem;
-  deleteButton.textContent = "Delete";
+  listText.textContent = newItem;
+  listButton.textContent = "Delete";
 
-  itemList.appendChild(newListItem);
+  itemList.appendChild(listItem);
 
-  deleteButton.addEventListener('click', () => {
-    itemList.removeChild(newListItem);
+  listButton.addEventListener('click', () => {
+    itemList.removeChild(listItem);
   });
 
   input.focus();
