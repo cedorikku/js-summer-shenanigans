@@ -1,4 +1,3 @@
-const listItem = document.querySelector('ul');
+const itemList = document.querySelector('ul');
 const input = document.getElementById('input');
-const addBtn = document.querySelector('button');
-
+const addButton = document.querySelector('button');
