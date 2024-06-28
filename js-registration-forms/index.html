@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZYX University</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="form">
+      <form id="register-form" class="register-form">
+        <h1>ZYX UNIVERSITY</h1>
+        <div class="form-item">
+          <label for="studentNumber">Student Number </label>
+          <input type="text" name="studentNumber" id="studentNumber" placeholder="Student Number" />
+        </div>
+
+        <div class="form-item">
+          <label for="studentName">Student Name </label>
+          <input type="text" name="studentName" id="studentName" placeholder="Student Name" />
+        </div>
+
+        <div class="form-item">
+          <label for="college">College</label>
+          <select
+            name="college"
+            id="college"
+            onchange="configureLists(this, document.getElementById('course'))"
+          >
+            <option selected="selected" id="0" value="-">Select Course</option>
+            <option id="1" value="CSCS">CSCS</option>
+            <option id="2" value="CBAA">CBAA</option>
+            <option id="3" value="CEAT">CEAT</option>
+          </select>
+        </div>
+
+        <div class="form-item">
+          <label for="course">Courses</label>
+          <select name="course" id="course" disabled="true">
+            <!--JS OPTIONS-->
+          </select>
+        </div>
+
+        <div class="form-item">
+          <label for="units">Units Enrolled </label>
+          <input type="number" name="units" id="units" placeholder="Units" />
+        </div>
+
+        <div class="form-item">
+          <p id="ratePerUnit" class="italic">*Rate Per Unit: 3000</p>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <script defer src="script.js"></script>
+  </body>
+</html>

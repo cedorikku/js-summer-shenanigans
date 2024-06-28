@@ -1,0 +1,57 @@
+body {
+    background-color: #121212; /* Dark background */
+    color: #E0E0E0; /* Light text color for contrast */
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+form {
+    display: flex;
+    background-color: #333; /* Slightly lighter form background for distinction */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.box {
+    justify-content: center;
+    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: 300px;
+}
+
+.form-item {
+    padding: 4px 0px;
+}
+
+.form-item label {
+    color: #BDBDBD; /* Lighter label color for readability */
+}
+
+.form-item input[type="number"] {
+    background-color: #222; /* Dark input fields */
+    color: #E0E0E0; /* Light text color */
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.form-buttons button {
+    background-color: #0D7377; /* Dark mode friendly button color */
+    color: #E0E0E0;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-buttons button:hover {
+    background-color: #14FFEC; /* Lighter color on hover for visibility */
+    color: #333;
+}

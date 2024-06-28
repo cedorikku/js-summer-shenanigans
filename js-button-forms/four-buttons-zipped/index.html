@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operations</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form>
+        <div class="box">
+            <div class="form-item">
+                <label for="first">First number: </label>
+                <input type="number" name="first" id="first" required>
+            </div>
+            <div class="form-item">
+                <label for="second">Second number: </label>
+                <input type="number" name="second" id="second" required>
+            </div>
+            <div class="form-buttons">
+                <input type="button" value="Add" id="addBtn" onclick="add()">
+                <input type="button" value="Subtract" id="subtractBtn" onclick="subtract()">
+                <input type="button" value="Multiply" id="multiplyBtn" onclick="multiply()">
+                <input type="button" value="Divide" id="divideBtn" onclick="divide()">
+            </div>
+            <div>
+                <p id="answer"></p>
+            </div>
+        </div>
+    </form>
+
+    <script defer src="script.js"></script>
+</body>
+</html>
