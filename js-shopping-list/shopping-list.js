@@ -1,5 +1,5 @@
 const itemList = document.querySelector('ul');
-const input = document.getElementById('input');
+const input = document.getElementById('item');
 const addButton = document.querySelector('button');
 
 addButton.addEventListener('click', () => {
@@ -13,7 +13,7 @@ addButton.addEventListener('click', () => {
   newListItem.appendChild(listItemValue);
   newListItem.appendChild(deleteButton);
 
-  listItemValue.textContent = toString(newItem);
+  listItemValue.textContent = newItem;
   deleteButton.textContent = "Delete";
 
   itemList.appendChild(newListItem);
