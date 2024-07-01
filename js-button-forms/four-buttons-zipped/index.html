@@ -17,11 +17,12 @@
                 <label for="second">Second number: </label>
                 <input type="number" name="second" id="second" required>
             </div>
+            <br>
             <div class="form-buttons">
-                <input type="button" value="Add" id="addBtn" onclick="add()">
-                <input type="button" value="Subtract" id="subtractBtn" onclick="subtract()">
-                <input type="button" value="Multiply" id="multiplyBtn" onclick="multiply()">
-                <input type="button" value="Divide" id="divideBtn" onclick="divide()">
+                <button type="button" value="Add" id="addBtn" onclick="myFunction('+')">Add</button>
+                <button type="button" value="Subtract" id="subtractBtn" onclick="myFunction('-')">Subtract</button>
+                <button type="button" value="Multiply" id="multiplyBtn" onclick="myFunction('*')">Multiply</button>
+                <button type="button" value="Divide" id="divideBtn" onclick="myFunction('/')">Divide</button>
             </div>
             <div>
                 <p id="answer"></p>
