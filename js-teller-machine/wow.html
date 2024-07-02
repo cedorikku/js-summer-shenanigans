@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM Program</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .button {
+            margin: 5px 0;
+        }
+        .result {
+            margin-top: 10px;
+            color: green;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>ATM Program</h1>
+    <div class="button">
+        <button onclick="deposit()">Deposit</button>
+        <button onclick="withdraw()">Withdraw</button>
+        <button onclick="checkBalance()">Check Balance</button>
+    </div>
+    <div id="message" class="result"></div>
+    <div id="error" class="error"></div>
+    <div class="button">
+        <button onclick="startATM()">Start ATM</button>
+    </div>
+    <script src="wow.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATM with PIN</title>
+    <style>
+      p,
+      label {
+        font: 1rem "Fira Sans", sans-serif;
+      }
+      input[type="password"] {
+        text-align: center;
+        width: 100px;
+        height: 60px;
+        border-radius: 6px;
+        font-size: 18px;
+        padding: 0 4px;
+        border: 2px solid #000;
+        background: transparent;
+        color: #000;
+        outline: none;
+      }
+      button {
+        margin: 10px 0;
+        width: 100px;
+        height: 40px;
+        color: #fff;
+        border-radius: 5px;
+        padding: 10px 25px;
+        font-family: "Lato", sans-serif;
+        font-weight: 500;
+        background: transparent;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+        box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
+          7px 7px 20px 0px rgba(0, 0, 0, 0.1),
+          4px 4px 5px 0px rgba(0, 0, 0, 0.1);
+        outline: none;
+      }
+      #info {
+        text-align: center;
+      }
+      #transactionForm {
+        display: none;
+      }
+      #pinForm {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="pinForm">
+      <h1>Enter PIN</h1>
+      <input type="password" id="password" maxlength="4" />
+      <div>
+        <button type="Enter">Enter</button>
+      </div>
+    </form>
+
+    <form id="transactionForm">
+      <fieldset>
+        <legend>Select a transaction:</legend>
+
+        <div class="button">
+          <input
+            type="radio"
+            name="transaction"
+            id="balance"
+            value="balance"
+            onchange="changeInfo('BALANCE')"
+          />
+          <label for="balance">Balance</label>
+        </div>
+        <div class="button">
+          <input
+            type="radio"
+            name="transaction"
+            id="withdraw"
+            value="withdraw"
+            onchange="changeInfo('WITHDRAW')"
+          />
+          <label for="withdraw">Withdraw</label>
+        </div>
+        <div class="button">
+          <input
+            type="radio"
+            name="transaction"
+            id="deposit"
+            value="deposit"
+            onchange="changeInfo('DEPOSIT')"
+          />
+          <label for="deposit">Deposit</label>
+        </div>
+      </fieldset>
+
+      <p id="info"></p>
+    </form>
+
+    <script defer src="atm-pin.js"></script>
+  </body>
+</html>
