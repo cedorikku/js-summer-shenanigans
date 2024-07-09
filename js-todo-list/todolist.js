@@ -4,7 +4,7 @@ const taskList = document.querySelector('#taskList');
 
 addButton.addEventListener('click', () => {
   if (!taskInput.value.trim()) {
-    // TODO throw clear error message
+    taskInput.focus();
     console.log("No item added");
     return;
   }
