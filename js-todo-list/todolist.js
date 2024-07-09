@@ -9,6 +9,12 @@ addButton.addEventListener('click', () => {
     return;
   }
 
+  createTask();
+
+  console.log("An item was added");
+});
+
+function createTask() {
   const listItem = document.createElement('li');
   listItem.textContent = taskInput.value;
   const complete = document.createElement('button');
@@ -20,9 +26,7 @@ addButton.addEventListener('click', () => {
 
   taskInput.value = "";
   taskInput.focus();
-  console.log("An item was added");
-});
-
+}
 
 function completeTask(event) {
   event.target.parentNode.remove();
