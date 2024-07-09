@@ -11,7 +11,18 @@ addButton.addEventListener('click', () => {
 
   const listItem = document.createElement('li');
   listItem.textContent = taskInput.value;
+  const complete = document.createElement('button');
+  complete.textContent = "Done";
+  complete.addEventListener('click', event => { completeTask(event) });
+
+  listItem.appendChild(complete);
   taskList.appendChild(listItem);
 
   console.log("An item was added");
 });
+
+
+function completeTask(event) {
+  event.target.parentNode.remove();
+  console.log("A task was completed");
+}
