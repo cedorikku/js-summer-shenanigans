@@ -18,11 +18,15 @@ addButton.addEventListener('click', () => {
   listItem.appendChild(complete);
   taskList.appendChild(listItem);
 
+  taskInput.value = "";
+  taskInput.focus();
   console.log("An item was added");
 });
 
 
 function completeTask(event) {
   event.target.parentNode.remove();
+
+  taskInput.focus();
   console.log("A task was completed");
 }
